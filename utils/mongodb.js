@@ -8,7 +8,7 @@ const queryTest = async function queryTest() {
         const tests = database.collection('test');
         // Query for a movie that has the title 'Back to the Future'
         const query = {};
-        const test = await tests.find(query);
+        const test = await tests.find(query).toArray();
         console.log(test)
         return test
     } catch (ex) {
